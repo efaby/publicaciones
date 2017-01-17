@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/inicio', function () {
-    return view('index');
-});
+	Route::get('/inicio', function () {
+	    return view('index');
+	});
 
 	Route::get('/home', function () {
 		return view('inicio');
@@ -23,7 +23,15 @@ Route::get('/inicio', function () {
 		return view('login');
 	});
 
-		Route::get('/publicaciones', function () {
+	Route::get('/publicaciones', function () {
 			return view('publicaciones.listado');
 		});
 		
+		
+	Route::get('facultades/getFacultades', 'Catalogos\FacultadController@getFacultades');
+	Route::get('facultades/getFacultadByID/{id}', 'Catalogos\FacultadController@getFacultadByID');
+	
+	Route::resource('facultades', 'Catalogos\FacultadController');
+	
+			
+			

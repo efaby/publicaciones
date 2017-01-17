@@ -24,6 +24,16 @@ app.controller('mainController',['$scope','$route', function($scope, $http, API_
 		$scope.prepareListBreadcrumb(list);	
 		$scope.itemActive(e);
 	};
+	
+	$scope.toModuloFacultades = function(e){
+		$scope.titulo = "Facultades";
+		$scope.toModulo = "facultades";
+		var list = [
+			'<li>Facultades</li>'
+		];		
+		$scope.prepareListBreadcrumb(list);	
+		$scope.itemActive(e);
+	};
 
 	$scope.prepareListBreadcrumb = function (list_module) {
 		$scope.list_breadcrumb = [

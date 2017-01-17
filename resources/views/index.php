@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="<?= asset('css/ionicons.min.css') ?>">
   <link rel="stylesheet" href="<?= asset('css/AdminLTE.min.css') ?>">
   <link rel="stylesheet" href="<?= asset('css/_all-skins.min.css') ?>">
+  <link rel="stylesheet" href="<?= asset('css/styles.css') ?>">
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -95,7 +96,13 @@
             <span>Mis Publicaciones</span>            
           </a>         
         </li>
-         <li><a href="#"><i class="fa fa-files-o"></i> <span>Publicaciones No Indexadas</span></a></li>         
+         <li><a href="#"><i class="fa fa-files-o"></i> <span>Publicaciones No Indexadas</span></a></li> 
+         <li id="facultades">
+          <a href="#" ng-click="toModuloFacultades($event);">
+            <i class="fa fa-book"></i>
+            <span>Facultades</span>            
+          </a>         
+        </li>        
       </ul>
     </section>
   </aside>
@@ -134,6 +141,7 @@
 <script src="<?= asset('app/app.js') ?>"></script>
 <script src="<?= asset('app/controllers/mainController.js') ?>"></script>
 <script src="<?= asset('app/controllers/misPublicacionesController.js') ?>"></script>
+<script src="<?= asset('app/controllers/facultadesController.js') ?>"></script>
 
 
 </body>
