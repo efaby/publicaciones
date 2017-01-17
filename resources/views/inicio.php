@@ -43,7 +43,7 @@
 
       <div class="box">
 
-<div style="margin-top: 20px; padding-bottom: 50px;">Aqui va todo</div>
+<div style="margin-top: 20px; padding-bottom: 50px;">Contenido de la Pagina Web</div>
 		
 		
 		
