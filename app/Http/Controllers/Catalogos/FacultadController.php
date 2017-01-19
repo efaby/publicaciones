@@ -10,7 +10,7 @@ use App\Models\Catalogos\EscuelaModel;
 class FacultadController extends Controller
 {
 	public function index(){
-		return view('catalogos/index_facultad');
+		return view('catalogos/index_facultad'); 
 	}
 
 	public function getFacultades(){

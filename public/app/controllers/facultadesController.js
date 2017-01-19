@@ -22,7 +22,7 @@ app.controller('facultadesController', function($scope, $http, API_URL) {
             	$('#modalActionFacultad').modal('show');
             	break;
             case 'edit':
-                $scope.form_title = "EditarFacultad";
+                $scope.form_title = "Editar Facultad";
                 $scope.id = id;
                 $http.get(API_URL + 'facultades/'  + id).success(function(response){
                 	$scope.facultad = response;     
@@ -30,7 +30,6 @@ app.controller('facultadesController', function($scope, $http, API_URL) {
                 });
 
                 break;
-
             case 'info':
             	$http.get(API_URL + 'facultades/'  + id ).success(function(response){
                 	    $scope.facultad = response; 
@@ -57,7 +56,7 @@ app.controller('facultadesController', function($scope, $http, API_URL) {
        
         if ($scope.modalstate === 'add'){
         	$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
-            $http.post(url,$scope.facultad ).success(function (data) {
+                $http.post(url,$scope.facultad ).success(function (data) {
                 $scope.initLoad();
                 $('#modalActionFacultad').modal('hide');
                 $scope.message = 'Se insertó correctamente la Facultad...';
@@ -67,7 +66,7 @@ app.controller('facultadesController', function($scope, $http, API_URL) {
             });
         } else {
         	 console.log($scope.facultad);
-            $http.put(url, $scope.facultad ).success(function (data) {
+                $http.put(url, $scope.facultad ).success(function (data) {
                 $scope.initLoad();
                 $('#modalActionFacultad').modal('hide');
                 $scope.message = 'Se Modifico correctamente la Facultad...';

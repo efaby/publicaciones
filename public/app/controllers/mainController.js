@@ -34,7 +34,37 @@ app.controller('mainController',['$scope','$route', function($scope, $http, API_
 		$scope.prepareListBreadcrumb(list);	
 		$scope.itemActive(e);
 	};
-
+        
+        $scope.toModuloAreaConocimiento = function(e){
+		$scope.titulo = "Área de Conocimiento";
+		$scope.toModulo = "areasconocimientos";
+		var list = [
+			'<li>Area de Conocimiento</li>'
+		];		
+		$scope.prepareListBreadcrumb(list);	
+		$scope.itemActive(e);
+	};
+        
+        $scope.toModuloLineasInvestigacion = function(e){
+		$scope.titulo = "Líneas de Investigación";
+		$scope.toModulo = "lineasinvestigaciones";
+		var list = [
+			'<li>Líneas de Investigación</li>'
+		];		
+		$scope.prepareListBreadcrumb(list);	
+		$scope.itemActive(e);
+	};
+        
+        $scope.toModuloGrupoInvestigacion = function(e){
+		$scope.titulo = "Grupo de Investigación";
+		$scope.toModulo = "gruposinvestigaciones";
+		var list = [
+			'<li>Grupo de Investigación</li>'
+		];		
+		$scope.prepareListBreadcrumb(list);	
+		$scope.itemActive(e);
+	};
+        
 	$scope.prepareListBreadcrumb = function (list_module) {
 		$scope.list_breadcrumb = [
 			"<li><i class='fa fa-dashboard'></i> &nbsp; Inicio</li>",
