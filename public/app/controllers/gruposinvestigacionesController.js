@@ -26,7 +26,7 @@ app.controller('gruposinvestigacionesController', function($scope, $http, API_UR
                 $scope.id = id;
                 $http.get(API_URL + 'gruposinvestigaciones/'  + id).success(function(response){
                 	$scope.grupoinvestigacion = response;     
-                	$('#modalActionGrupoInvestigacion').modal('show');
+                	$('#modalActionGrupoInvestacion').modal('show');
                 });
 
                 break;
@@ -58,7 +58,7 @@ app.controller('gruposinvestigacionesController', function($scope, $http, API_UR
            // $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
             $http.post(url,$scope.grupoinvestigacion ).success(function (data) {
                 $scope.initLoad();
-                $('#modalActionGrupoInvestigacion').modal('hide');
+                $('#modalActionGrupoInvestacion').modal('hide');
                 $scope.message = 'Se insertó correctamente el Grupo de Investigación...';
                 $('#modalMessage').modal('show');
                 setTimeout("$('#modalMessage').modal('hide')",3000);
@@ -68,7 +68,7 @@ app.controller('gruposinvestigacionesController', function($scope, $http, API_UR
         	 console.log($scope.grupoinvestigacion);
                 $http.put(url, $scope.grupoinvestigacion ).success(function (data) {
                 $scope.initLoad();
-                $('#modalActionGrupoInvestigacion').modal('hide');
+                $('#modalActionGrupoInvestacion').modal('hide');
                 $scope.message = 'Se Modifico correctamente el Grupo de Investigación...';
                 $('#modalMessage').modal('show');
                 setTimeout("$('#modalMessage').modal('hide')",3000);

@@ -59,7 +59,7 @@
         </div>
     </div>
 
-    <div class="modal fade" tabindex="-1" role="dialog" id="modalActionGrupoInvestigacion">
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalActionGrupoInvestacion">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header modal-header-primary">
