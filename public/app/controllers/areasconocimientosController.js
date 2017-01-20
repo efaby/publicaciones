@@ -55,7 +55,7 @@ app.controller('areasconocimientosController', function($scope, $http, API_URL) 
         }
        
         if ($scope.modalstate === 'add'){
-            $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+            //$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
             $http.post(url,$scope.areaconocimiento ).success(function (data) {
                 $scope.initLoad();
                 $('#modalActionAreaConocimiento').modal('hide');

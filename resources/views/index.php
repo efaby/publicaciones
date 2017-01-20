@@ -96,27 +96,32 @@
             <span>Mis Publicaciones</span>            
           </a>         
         </li>
-         <li><a href="#"><i class="fa fa-files-o"></i> <span>Publicaciones No Indexadas</span></a></li> 
+         <li>
+         	<a href="#"><i class="fa fa-files-o"></i> 
+         	<span>Publicaciones No Indexadas</span></a>
+         </li> 
          <li id="facultades">
           <a href="#" ng-click="toModuloFacultades($event);">
             <i class="fa fa-book"></i>
-            <span>Facultades</span>       
+            <span>Facultades</span>     </a>  
         </li>  
          <li id="areaconocimiento">
           <a href="#" ng-click="toModuloAreaConocimiento($event);">
             <i class="fa fa-book"></i>
             <span>Área del Conocimiento</span>  
           </a>  
-          </li>
+         </li>
           <li id="lineasinvestigacion">
           <a href="#" ng-click="toModuloLineasInvestigacion($event);">
             <i class="fa fa-book"></i>
-            <span>Líneas de Investigación</span>       
+            <span>Líneas de Investigación</span>  
+            </a>     
         </li>  
         <li id="grupoinvestigacion">
           <a href="#" ng-click="toModuloGrupoInvestigacion($event);">
             <i class="fa fa-book"></i>
-            <span>Grupo de Investigación</span>       
+            <span>Grupo de Investigación</span>  
+            </a>     
         </li> 
       </ul>
     </section>

@@ -25,6 +25,7 @@ class LineasInvestigacionController extends Controller
      * @return \Illuminate\Http\JsonResponse
 	 */
 	public function store(Request $request)	{
+
 		$result = LineasInvestigacionModel::create($request->all());
 		return ($result) ? response()->json(['success' => true]) : response()->json(['success' => false]);		 
 	}

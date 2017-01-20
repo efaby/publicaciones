@@ -47,7 +47,7 @@ app.controller('lineasinvestigacionController', function($scope, $http, API_URL)
 
     $scope.Save = function (){
     		
-    	console.log("entro");
+    	console.log($scope.lineasinvestigacion);
     	var url = API_URL + "lineasinvestigaciones";
     	
         if ($scope.modalstate === 'edit'){
@@ -55,7 +55,7 @@ app.controller('lineasinvestigacionController', function($scope, $http, API_URL)
         }
        
         if ($scope.modalstate === 'add'){
-            $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+           // $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
             $http.post(url,$scope.lineasinvestigacion ).success(function (data) {
                 $scope.initLoad();
                 $('#modalActionLineasInvestigacion').modal('hide');

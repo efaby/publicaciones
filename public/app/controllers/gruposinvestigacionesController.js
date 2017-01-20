@@ -55,7 +55,7 @@ app.controller('gruposinvestigacionesController', function($scope, $http, API_UR
         }
        
         if ($scope.modalstate === 'add'){
-            $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+           // $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
             $http.post(url,$scope.grupoinvestigacion ).success(function (data) {
                 $scope.initLoad();
                 $('#modalActionGrupoInvestigacion').modal('hide');

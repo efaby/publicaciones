@@ -55,7 +55,7 @@ app.controller('facultadesController', function($scope, $http, API_URL) {
         }
        
         if ($scope.modalstate === 'add'){
-        	$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+        	
                 $http.post(url,$scope.facultad ).success(function (data) {
                 $scope.initLoad();
                 $('#modalActionFacultad').modal('hide');
