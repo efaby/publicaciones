@@ -100,9 +100,24 @@
          <li id="facultades">
           <a href="#" ng-click="toModuloFacultades($event);">
             <i class="fa fa-book"></i>
-            <span>Facultades</span>            
-          </a>         
-        </li>        
+            <span>Facultades</span>       
+        </li>  
+         <li id="areaconocimiento">
+          <a href="#" ng-click="toModuloAreaConocimiento($event);">
+            <i class="fa fa-book"></i>
+            <span>Área del Conocimiento</span>  
+          </a>  
+          </li>
+          <li id="lineasinvestigacion">
+          <a href="#" ng-click="toModuloLineasInvestigacion($event);">
+            <i class="fa fa-book"></i>
+            <span>Líneas de Investigación</span>       
+        </li>  
+        <li id="grupoinvestigacion">
+          <a href="#" ng-click="toModuloGrupoInvestigacion($event);">
+            <i class="fa fa-book"></i>
+            <span>Grupo de Investigación</span>       
+        </li> 
       </ul>
     </section>
   </aside>
@@ -142,7 +157,8 @@
 <script src="<?= asset('app/controllers/mainController.js') ?>"></script>
 <script src="<?= asset('app/controllers/misPublicacionesController.js') ?>"></script>
 <script src="<?= asset('app/controllers/facultadesController.js') ?>"></script>
-
-
+<script src="<?= asset('app/controllers/areasconocimientosController.js') ?>"></script>
+<script src="<?= asset('app/controllers/lineasinvestigacionController.js') ?>"></script>
+<script src="<?= asset('app/controllers/gruposinvestigacionesController.js') ?>"></script>
 </body>
 </html>
