@@ -20,6 +20,8 @@ app.controller('facultadesController', function($scope, $http, API_URL) {
             	$scope.form_title = "Nueva Facultad";    
             	$scope.facultad = {};
             	$('#modalActionFacultad').modal('show');
+                $scope. RE= /^[a-zA-Z, ; . _ ñ Ñ \-\á\é\í\ó\ú\Á\É\Í\Ó\Ú\ ]{1,64}$/;
+                $scope. RD= /^[a-zA-Z, ; . _ ñ Ñ \-\á\é\í\ó\ú\Á\É\Í\Ó\Ú\@\!\¡\?\¿\$\#\* 0-9  ]{1,64}$/;
             	break;
             case 'edit':
                 $scope.form_title = "Editar Facultad";
@@ -27,6 +29,8 @@ app.controller('facultadesController', function($scope, $http, API_URL) {
                 $http.get(API_URL + 'facultades/'  + id).success(function(response){
                 	$scope.facultad = response;     
                 	$('#modalActionFacultad').modal('show');
+                        $scope. RE= /^[a-zA-Z, ; . _ ñ Ñ \-\á\é\í\ó\ú\Á\É\Í\Ó\Ú\ ]{1,64}$/;
+                        $scope. RD= /^[a-zA-Z, ; . _ ñ Ñ \-\á\é\í\ó\ú\Á\É\Í\Ó\Ú\@\!\¡\?\¿\$\#\* 0-9  ]{1,64}$/;
                 });
 
                 break;

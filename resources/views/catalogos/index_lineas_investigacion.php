@@ -71,20 +71,22 @@
                         <div class="form-group error">
                             <label for="t_name_lineasinvestigacion" class="col-sm-4 control-label">Nombre Líneas de Investigación:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="nombre" id="nombre" ng-model="lineasinvestigacion.nombre" placeholder="Nombre Líneas de Investigación"
+                                <input type="text" class="form-control" name="nombre" id="nombre" ng-pattern="RE" ng-model="lineasinvestigacion.nombre" placeholder="Nombre Líneas de Investigación"
                                        ng-required="true" ng-maxlength="64">
                                 <span class="help-block error"
-                                      ng-show="formLineasInvestigacion.nombre.$invalid && formLineasInvestigacion.nombre.$touched">El nombre de la Línea de Investigación es requerido</span>
+                                      ng-show="formLineasInvestigacion.nombre.$invalid && formLineasInvestigacion.nombre.$touched"  style="color:red">El nombre de la Línea de Investigación es requerido</span>
                                 <span class="help-block error"
-                                      ng-show="formLineasInvestigacion.nombre.$invalid && formLineasInvestigacion.nombre.$error.maxlength">La longitud máxima es de 64 caracteres</span>
+                                      ng-show="formLineasInvestigacion.nombre.$invalid && formLineasInvestigacion.nombre.$error.maxlength"  style="color:red">La longitud máxima es de 64 caracteres</span>
+                                <span ng-show="formLineasInvestigacion.nombre.$error.pattern" style="color:red">Ingrese solo Letras.</span>
                             </div>
                         </div>
                         <div class="form-group error">
                             <label for="t_descripcion_lineasinvestigacion" class="col-sm-4 control-label">Descripción de la Líneas de Investigación:</label>
                             <div class="col-sm-8">
-                            	<textarea name="descripcion" class="form-control" id="descripcion" ng-model="lineasinvestigacion.descripcion" placeholder="Descripcion de las Líneas de Investigación" ng-required="true"></textarea>
+                            	<textarea name="descripcion" class="form-control" id="descripcion" ng-pattern ="RD"  ng-model="lineasinvestigacion.descripcion" placeholder="Descripcion de las Líneas de Investigación" ng-required="true"></textarea>
                                 <span class="help-block error"
-                                      ng-show="formLineasInvestigacion.descripcion.$invalid && formLineasInvestigacion.descripcion.$touched">La descripción de las Líneas de Investigación es requerida</span>
+                                      ng-show="formLineasInvestigacion.descripcion.$invalid && formLineasInvestigacion.descripcion.$touched"  style="color:red">La descripción de las Líneas de Investigación es requerida</span>
+                                <span ng-show="formLineasInvestigacion.descripcion.$error.pattern" style="color:red">No Ingrese Caracteres Especiales.</span>
                             </div>
                         </div>
                     </form>

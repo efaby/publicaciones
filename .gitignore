@@ -6,3 +6,6 @@
 Homestead.json
 Homestead.yaml
 .env
+/nbproject/private/
+/Arboles/nbproject/private/
+/Arboles/build/

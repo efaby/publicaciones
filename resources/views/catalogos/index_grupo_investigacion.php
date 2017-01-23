@@ -71,20 +71,22 @@
                         <div class="form-group error">
                             <label for="t_name_grupoinvestigacion" class="col-sm-4 control-label">Nombre del Grupo de Investigación:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="nombre" id="nombre" ng-model="grupoinvestigacion.nombre" placeholder="Nombre Grupo de Investigación"
+                                <input type="text" class="form-control" name="nombre" id="nombre"  ng-pattern="RE"  ng-model="grupoinvestigacion.nombre" placeholder="Nombre Grupo de Investigación"
                                        ng-required="true" ng-maxlength="64">
                                 <span class="help-block error"
-                                      ng-show="formGrupoInvestigacion.nombre.$invalid && formGrupoInvestigacion.nombre.$touched">El nombre del Grupo de Investigación es requerido</span>
+                                      ng-show="formGrupoInvestigacion.nombre.$invalid && formGrupoInvestigacion.nombre.$touched"  style="color:red">El nombre del Grupo de Investigación es requerido</span>
                                 <span class="help-block error"
-                                      ng-show="formGrupoInvestigacion.nombre.$invalid && formGrupoInvestigacion.nombre.$error.maxlength">La longitud máxima es de 64 caracteres</span>
+                                      ng-show="formGrupoInvestigacion.nombre.$invalid && formGrupoInvestigacion.nombre.$error.maxlength"  style="color:red">La longitud máxima es de 64 caracteres</span>
+                                <span ng-show="formGrupoInvestigacion.nombre.$error.pattern" style="color:red">Ingrese solo Letras.</span>
                             </div>
                         </div>
                         <div class="form-group error">
                             <label for="t_descripcion_grupoinvestigacion" class="col-sm-4 control-label">Descripción del Grupo de Investigación:</label>
                             <div class="col-sm-8">
-                            	<textarea name="descripcion" class="form-control" id="descripcion" ng-model="grupoinvestigacion.descripcion" placeholder="Descripcion del GRupo de INvestigación" ng-required="true"></textarea>
+                            	<textarea name="descripcion" class="form-control" id="descripcion" ng-pattern ="RD" ng-model="grupoinvestigacion.descripcion" placeholder="Descripcion del GRupo de INvestigación" ng-required="true"></textarea>
                                 <span class="help-block error"
-                                      ng-show="formGrupoInvestigacion.descripcion.$invalid && formGrupoInvestigacion.descripcion.$touched">La descripción del Grupo de Investigación es requerida</span>
+                                      ng-show="formGrupoInvestigacion.descripcion.$invalid && formGrupoInvestigacion.descripcion.$touched"  style="color:red">La descripción del Grupo de Investigación es requerida</span>
+                                <span ng-show="formGrupoInvestigacion.descripcion.$error.pattern" style="color:red">No Ingrese Caracteres Especiales.</span>
                             </div>
                         </div>
                     </form>

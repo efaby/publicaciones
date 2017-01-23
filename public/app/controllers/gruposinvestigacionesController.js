@@ -20,6 +20,8 @@ app.controller('gruposinvestigacionesController', function($scope, $http, API_UR
             	$scope.form_title = "Nuevo Grupo de Investigación";    
             	$scope.grupoinvestigacion = {};
             	$('#modalActionGrupoInvestacion').modal('show');
+                $scope. RE= /^[a-zA-Z, ; . _ ñ Ñ \-\á\é\í\ó\ú\Á\É\Í\Ó\Ú\  0-9 ]{1,64}$/;
+                $scope. RD= /^[a-zA-Z, ; . _ ñ Ñ \-\á\é\í\ó\ú\Á\É\Í\Ó\Ú\@\!\¡\?\¿\$\#\* 0-9  ]{1,164}$/;
             	break;
             case 'edit':
                 $scope.form_title = "Editar Grupo de Investigación";
@@ -27,6 +29,8 @@ app.controller('gruposinvestigacionesController', function($scope, $http, API_UR
                 $http.get(API_URL + 'gruposinvestigaciones/'  + id).success(function(response){
                 	$scope.grupoinvestigacion = response;     
                 	$('#modalActionGrupoInvestacion').modal('show');
+                        $scope. RE= /^[a-zA-Z, ; . _ ñ Ñ \-\á\é\í\ó\ú\Á\É\Í\Ó\Ú\  0-9]{1,64}$/;
+                        $scope. RD= /^[a-zA-Z, ; . _ ñ Ñ \-\á\é\í\ó\ú\Á\É\Í\Ó\Ú\@\!\¡\?\¿\$\#\* 0-9  ]{1,164}$/;
                 });
 
                 break;

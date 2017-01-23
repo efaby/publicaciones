@@ -20,6 +20,8 @@ app.controller('areasconocimientosController', function($scope, $http, API_URL) 
             	$scope.form_title = "Nueva Área del Conocimiento";    
             	$scope.areaconocimiento = {};
             	$('#modalActionAreaConocimiento').modal('show');
+                $scope. RE= /^[a-zA-Z, ; . _ ñ Ñ \-\á\é\í\ó\ú\Á\É\Í\Ó\Ú\ ]{1,64}$/;
+                $scope. RD= /^[a-zA-Z, ; . _ ñ Ñ \-\á\é\í\ó\ú\Á\É\Í\Ó\Ú\@\!\¡\?\¿\$\#\* 0-9  ]{1,164}$/;
             	break;
             case 'edit':
                 $scope.form_title = "Editar Área del Conocimiento";
@@ -27,6 +29,8 @@ app.controller('areasconocimientosController', function($scope, $http, API_URL) 
                 $http.get(API_URL + 'areasconocimientos/'  + id).success(function(response){
                 	$scope.areaconocimiento = response;     
                 	$('#modalActionAreaConocimiento').modal('show');
+                        $scope. RE= /^[a-zA-Z, ; . _ ñ Ñ \-\á\é\í\ó\ú\Á\É\Í\Ó\Ú\ ]{1,64}$/;
+                        $scope. RD= /^[a-zA-Z, ; . _ ñ Ñ \-\á\é\í\ó\ú\Á\É\Í\Ó\Ú\@\!\¡\?\¿\$\#\* 0-9  ]{1,164}$/;
                 });
 
                 break;
